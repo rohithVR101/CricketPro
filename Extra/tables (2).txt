@@ -1,0 +1,5 @@
+CREATE TABLE LEAGUES (L_ID varchar(5) NOT NULL,Name varchar(50) NOT NULL,Country varchar(20) DEFAULT NULL,Season int(5) DEFAULT NULL,Type varchar(10) NOT NULL,Organisation varchar(20) DEFAULT NULL,U_ID varchar(10) DEFAULT NULL,PRIMARY KEY (L_ID),UNIQUE KEY U_ID (U_ID));
+
+CREATE TABLE LOGIN (U_ID varchar(10) DEFAULT NULL,Password varchar(50) NOT NULL,UNIQUE KEY U_ID (U_ID));
+
+create table Results(M_No int(3),T1Runs int(3),T1Wickets int(2),T2Runs int(3),T2Wickets int(2),MOM varchar(30),FOREIGN KEY (M_No) REFERENCES Fixtures(M_No) ON DELETE CASCADE);

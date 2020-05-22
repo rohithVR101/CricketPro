@@ -1,0 +1,25 @@
+Features
+
+Series setup in 5 minutes
+Live Scoring with Real-time Scores
+Player Profiles and Statistics
+Team Profiles and Statistics
+League/Team Sponsor Section
+Points Table with NRR
+Bat/Bowl/Field Statistics
+Player Rankings
+Player Search
+Playing history for each player
+Match Summary
+Scorecards
+Automated Live Commentary
+10 Different Themes
+Series management
+Statistics Aggregation
+Fixture management
+Automated Match Scheduler
+Manage Match Type
+Match Results
+Custom Logos
+Photo Gallery
+League Documents

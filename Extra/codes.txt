@@ -1,0 +1,61 @@
+
+-------------------------------------------------------NewLeague.java----------------------------------------------------------------------
+
+//GET DETAILS
+String lnam=lnamtxt.getText();
+String ctry=ctrytxt.getText();
+String ssn=ssntxt.getText();
+String uid=uidtxt.getText();
+String ass=asstxt.getText();
+
+//PASSWORD CHECK
+char[] pass=passtxt.getPassword();
+String p=Arrays.toString(pass);
+char[] cpass=cpasstxt.getPassword();
+String cp=Arrays.toString(cpass);
+
+if((pass.length)<8)
+{
+    JOptionPane.showMessageDialog(this, "Password must have minimum of 8 charecters!");
+}
+else
+{
+    if(p.equals(cp))
+    {
+        //TYPE CHECK
+        if(cbtn.isSelected())
+        {
+          this.setVisible(false);
+          new NewKnockout().setVisible(true); 
+        }
+        else if(dbtn.isSelected())
+        {
+          this.setVisible(false);
+          new ChooseTeams().setVisible(true); 
+        }
+        else
+        {
+          JOptionPane.showMessageDialog(this,"Please seelct a type!");
+        }
+    } 
+    else
+    {
+        JOptionPane.showMessageDialog(this, "Confirmed password doesn't match with created!");
+    }   
+}
+
+---------------------------------------------------------------NewKnockout.java------------------------------------------------------------------
+
+//GET DETAILS
+int tno=Integer.parseInt(tnotxt.getText());
+int lno=Integer.parseInt(lnotxt.getText());
+int vno=Integer.parseInt(vnotxt.getText());
+String start=sdate.getDateStringOrEmptyString();
+String ends=edate.getDateStringOrEmptyString();
+
+//CALCULATE NO.OF MATCHES
+int mno=(tno-1)*lno;
+mnotxt.setText("" + mno);       
+
+this.setVisible(false);
+new ChooseTeams().setVisible(true); 
